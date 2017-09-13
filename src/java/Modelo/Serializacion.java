@@ -21,7 +21,7 @@ import java.io.ObjectOutputStream;
 public class Serializacion {
 
     public boolean escribir(Inventario libro) throws FileNotFoundException, IOException {
-        File file = new File("Inventario.txt");
+        File file = new File("inventario.txt");
         System.out.println(file.getAbsolutePath());
         if (!file.exists()) {
             file.createNewFile();

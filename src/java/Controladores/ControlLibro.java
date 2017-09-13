@@ -31,19 +31,7 @@ public class ControlLibro extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ControlLibro</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ControlLibro at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -83,7 +71,7 @@ public class ControlLibro extends HttpServlet {
         int ids = Integer.parseInt(id);
         int pre = Integer.parseInt(precio);
 
-        if ((nombre.trim().length() > 0) && (id.trim().length() > 0) && (precio.trim().length() > 0) && (autor.trim().length() > 0) && (editoria.trim().length() > 0)) {
+        if (nombre.trim().length() > 0) {
             try {
                 //Abrir conexion 
                 Servicios servicios = new Servicios();

@@ -28,7 +28,7 @@
                 <div id="menubar">
                     <ul id="menu">
                         <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
-                        <li ><a href="Index.jsp">Crear</a></li>
+                        <li ><a href="index.jsp">Crear</a></li>
                         <li><a href="examples.html">Actualizar</a></li>
                         <li><a href="page.html">Leer</a></li>
                         <li><a href="another_page.html">Borrar</a></li>
@@ -80,13 +80,15 @@
                     <form action="ControlLibro" method="post">
                         <div class="form_settings">
                             <p><span>Nombre del libro</span>
-                                <input class="contact" type="text" name="activo" value="" /></p>
+                                <input class="contact" type="text" name="nombre" value="" /></p>
                             <p><span>Autor</span>
-                                <input class="contact" type="text" name="activo" value="" /></p>
+                                <input class="contact" type="text" name="autor" value="" /></p>
                             <p><span>Editorial</span>
-                                <input class="contact" type="text" name="activo" value="" /></p>
+                                <input class="contact" type="text" name="editoral" value="" /></p>
                             <p><span>Precio</span>
-                                <input class="contact" type="text" name="activo" value="" /></p>
+                                <input class="contact" type="text" name="precio" value="" /></p>
+                             <p><span>Id</span>
+                                <input class="contact" type="text" name="id" value="" /></p>
                             <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
                         </div>
                     </form>
