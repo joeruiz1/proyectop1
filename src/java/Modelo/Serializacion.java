@@ -36,11 +36,11 @@ public class Serializacion {
     }
 
     public Inventario leer() throws IOException, ClassNotFoundException {
-        File file = new File("bd.txt");
+        File file = new File("invenatrio.txt");
         System.out.println(file.getAbsolutePath());
         Inventario bd = null;
         if (file.exists()) {
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream(new File("bd.txt")));
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream(new File("inventario.txt")));
             bd = (Inventario) in.readObject();
             in.close();
             return bd;
