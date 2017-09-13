@@ -32,7 +32,7 @@
           <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
           <li class="current"><a href="index.jsp">Crear</a></li>
           <li><a href="examples.html">Actualizar</a></li>
-          <li><a href="page.html">Leer</a></li>
+          <li><a href="leer.jsp">Leer</a></li>
           <li><a href="another_page.html">Borrar</a></li>
           <li><a href="contact.html">Listar Todo</a></li>
           <li><a href="inventario.jsp">Registrar libro</a></li>

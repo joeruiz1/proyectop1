@@ -1,7 +1,7 @@
 <%-- 
-    Document   : inventario
-    Created on : 12/09/2017, 01:21:48 PM
-    Author     : Juan Manuel
+    Document   : leer
+    Created on : 12/09/2017, 11:55:15 PM
+    Author     : Alejandro
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -30,10 +30,11 @@
                         <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
                         <li ><a href="index.jsp">Crear</a></li>
                         <li><a href="examples.html">Actualizar</a></li>
-                        <li><a href="leer.jsp"">Leer</a></li>
+                        <li class="current"><a href="leer.jsp">Leer</a></li>
                         <li><a href="another_page.html">Borrar</a></li>
                         <li><a href="contact.html">Listar Todo</a></li>
-                        <li class="current"><a href="inventario.jsp">Registar Libro</a></li>
+                        <li><a href="inventario.jsp">Registrar libro</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -72,26 +73,6 @@
                         }
                     %>
 
-
-
-
-                    <p>Ingrese la informacion solicitada</p>
-
-                    <form action="ControlLibro" method="post">
-                        <div class="form_settings">
-                            <p><span>Nombre del libro</span>
-                                <input class="contact" type="text" name="nombre" value="" /></p>
-                            <p><span>Autor</span>
-                                <input class="contact" type="text" name="autor" value="" /></p>
-                            <p><span>Editorial</span>
-                                <input class="contact" type="text" name="editoral" value="" /></p>
-                            <p><span>Precio</span>
-                                <input class="contact" type="text" name="precio" value="" /></p>
-                             <p><span>Id</span>
-                                <input class="contact" type="text" name="id" value="" /></p>
-                            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
-                        </div>
-                    </form>
 
                 </div>
             </div>
