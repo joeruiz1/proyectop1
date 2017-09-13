@@ -4,6 +4,8 @@
     Author     : Alejandro
 --%>
 
+<%@page import="Servicios.Inventario"%>
+<%@page import="Modelo.Serializacion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html>
@@ -56,9 +58,13 @@
                 </div>
                 <div id="content">
                     <!-- insert the page content here -->
-                    <h1>Registro de Libros</h1>
+                    <h1>Libros Existentes</h1>
 
                     <%
+                        //Serializacion se = new Serializacion();
+                        //Inventario in = new Inventario();
+                        //in=se.leer();
+                        //System.out.println(in);
                         if (request.getAttribute("resultado") != null) {
                             Boolean resultado = (Boolean) request.getAttribute("resultado");
                             if (resultado.booleanValue() == true) {
