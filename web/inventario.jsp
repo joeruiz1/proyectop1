@@ -29,9 +29,9 @@
                     <ul id="menu">
                         <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
                         <li ><a href="index.jsp">Crear</a></li>
-                        <li><a href="examples.html">Actualizar</a></li>
-                        <li><a href="leer.jsp"">Leer</a></li>
-                        <li><a href="another_page.html">Borrar</a></li>
+                        <li><a href="Actualizar.jsp">Actualizar</a></li>
+                        <li><a href="leer.jsp">Leer</a></li>
+                        <li><a href="borrar.jsp">Borrar</a></li>
                         <li><a href="contact.html">Listar Todo</a></li>
                         <li class="current"><a href="inventario.jsp">Registar Libro</a></li>
                     </ul>
@@ -44,9 +44,6 @@
                     <div class="sidebar">
                         <!-- insert your sidebar items here -->
                         <h3>&Uacute;ltimas Noticias</h3>
-                        <h4> hay libros disponibles</h4>
-                        <h5>12 septiembre 2018</h5>
-                        <p>Los osciloscopios estan siendo usados en clase de Potencia<br /><a href="#">Read more</a></p>
                     </div>
                     <!-- Final presentacion Noticias-->
 

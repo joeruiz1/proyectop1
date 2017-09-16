@@ -1,13 +1,11 @@
 <%-- 
-    Document   : leer
-    Created on : 12/09/2017, 11:55:15 PM
-    Author     : Alejandro
+    Document   : Actualizar
+    Created on : 15/09/2017, 09:10:44 PM
+    Author     : fernando stiven
 --%>
 
-<%@page import="Servicios.Inventario"%>
-<%@page import="Modelo.Serializacion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
     <head>
@@ -32,11 +30,10 @@
                         <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
                         <li ><a href="index.jsp">Crear</a></li>
                         <li><a href="Actualizar.jsp">Actualizar</a></li>
-                        <li class="current"><a href="leer.jsp">Leer</a></li>
+                        <li><a href="leer.jsp">Leer</a></li>
                         <li><a href="borrar.jsp">Borrar</a></li>
                         <li><a href="contact.html">Listar Todo</a></li>
-                        <li><a href="inventario.jsp">Registrar libro</a></li>
-                        
+                        <li class="current"><a href="inventario.jsp">Registar Libro</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,13 +52,9 @@
                 </div>
                 <div id="content">
                     <!-- insert the page content here -->
-                    <h1>Libros Existentes</h1>
+                    <h1>Actualizar registro de Libros</h1>
 
                     <%
-                        //Serializacion se = new Serializacion();
-                        //Inventario in = new Inventario();
-                        //in=se.leer();
-                        //System.out.println(in);
                         if (request.getAttribute("resultado") != null) {
                             Boolean resultado = (Boolean) request.getAttribute("resultado");
                             if (resultado.booleanValue() == true) {
@@ -76,6 +69,26 @@
                         }
                     %>
 
+
+
+
+                    <p>Ingrese la informacion solicitada</p>
+
+                    <form action="ControlActualizar" method="post">
+                        <div class="form_settings">
+                            <p><span>Nombre del libro</span>
+                                <input class="contact" type="text" name="nombre" value="" /></p>
+                            <p><span>Autor</span>
+                                <input class="contact" type="text" name="autor" value="" /></p>
+                            <p><span>Editorial</span>
+                                <input class="contact" type="text" name="editoral" value="" /></p>
+                            <p><span>Precio</span>
+                                <input class="contact" type="text" name="precio" value="" /></p>
+                             <p><span>Id</span>
+                                <input class="contact" type="text" name="id" value="" /></p>
+                            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
+                        </div>
+                    </form>
 
                 </div>
             </div>

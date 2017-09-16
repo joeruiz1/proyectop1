@@ -5,8 +5,11 @@
  */
 package Controladores;
 
+import Servicios.Inventario;
+import Servicios.Servicios;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,20 +32,11 @@ public class ControlBorrar extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ControlBorrar</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ControlBorrar at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            
         }
-    }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -71,7 +65,26 @@ public class ControlBorrar extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        String id =request.getParameter("id");
+        int ids = Integer.parseInt(id);
+        
+      if(id!=null){
+          System.out.println("NO EXISTEN LIBROS EN LA PLATAFORMA");
+          
+      }else{
+      if(id==request.getParameter("id")){
+          Inventario i=new Inventario();
+          i.deletePrestamo(ids);
+          System.out.println("libro borrado");
+          
+      }    
+      
+
+        }
     }
+        
+    
 
     /**
      * Returns a short description of the servlet.
