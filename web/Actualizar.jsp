@@ -59,11 +59,11 @@
                             Boolean resultado = (Boolean) request.getAttribute("resultado");
                             if (resultado.booleanValue() == true) {
                     %>
-                    <h2> El Libro fue registrado satisfactoriamente</h2>
+                    <h2> El Libro fue Actualizado  satisfactoriamente</h2>
                     <%
                     } else {
                     %>     
-                    <h2> El Libro no fue registrado </h2>
+                    <h2> El Libro no fue Actualizado  </h2>
                     <%
                             }
                         }

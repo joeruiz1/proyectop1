@@ -54,6 +54,7 @@
                             if (resultado.booleanValue() == true) {
                     %>
                     <h2> El Libro fue borrado satisfactoriamente</h2>
+                    
                     <%
                     } else {
                     %>     
