@@ -89,7 +89,8 @@ public class ControlBorrar extends HttpServlet {
             RequestDispatcher rq = request.getRequestDispatcher("borrar.jsp");
             if (resultado == true) {
                 request.setAttribute("resultado", true);
-                resultado= in.deletePrestamo(ids);
+                resultado = in.deletePrestamo(ids);
+                System.out.println(resultado);
             } else {
                 request.setAttribute("resultado", false);
             }
