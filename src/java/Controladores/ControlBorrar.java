@@ -82,17 +82,25 @@ public class ControlBorrar extends HttpServlet {
             //Cargar lo que hay actualmente en el archivo
             Modelo.Libro libro = new Modelo.Libro(ids, nombre, autor, editoria, pre);
             Inventario in = new Inventario();
-            boolean resultado = in.deletePrestamo(ids);
+             boolean resultado;
+            try {
+                resultado = servicios.escribir(libro);
             //Enviar datos a otro pagina
             RequestDispatcher rq = request.getRequestDispatcher("borrar.jsp");
             if (resultado == true) {
                 request.setAttribute("resultado", true);
+                resultado= in.deletePrestamo(ids);
             } else {
                 request.setAttribute("resultado", false);
             }
             rq.forward(request, response);
 
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(ControlBorrar.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
+            }
+            
 
 //        
 //      if(id!=null){
